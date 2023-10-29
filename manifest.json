@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Password Generator Extension",
+  "version": "1.0",
+  "author": "Abhishek Verma",
+  "description": "Generate and copy random passwords.",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "images/logo.png",
+    "default_title": "Password Generator Extension"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["index.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "icons": {
+    "16": "images/logo.png",
+    "48": "images/logo.png",
+    "128": "images/logo.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*"
+  ]
+}
